@@ -5,6 +5,7 @@
   </head>
   <body>
     <div class="js-container"></div>
+    <div class="button"></div>
   
     <script src="https://unpkg.com/supersimpledev@8.6.4/external-library.js"></script>
     
@@ -16,8 +17,15 @@
 
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
     <script type="text/babel">
-      const container = document.querySelector('.js-container');
-      ReactDOM.createRoot(container).render('Welcome to SuperSimpleDev React Course');
+      const name="ayush";
+      const container=document.querySelector('.js-container');
+      const button=<button>Good job!</button>
+      ReactDOM.createRoot(container).render(button);
+      
+      
+
+      
+      
     </script>
   </body>
 </html>
