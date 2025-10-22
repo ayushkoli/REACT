@@ -17,10 +17,25 @@
 
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
     <script type="text/babel">
-      const name="ayush";
+      
       const container=document.querySelector('.js-container');
-      const button=<button>Good job!</button>
-      ReactDOM.createRoot(container).render(button);
+      const productcost=Number(prompt("enter product cost"));
+      const shippingcost= Number(prompt("enter shipping cost"));
+      const total=productcost+shippingcost;
+      
+
+      const div=(
+        <div>
+          <p>product cost: ${productcost}</p>
+          <p>shipping cost: ${shippingcost}</p>
+          <p>total cost: ${total}</p>
+          <button>Place your Order</button>
+
+
+        </div>
+      );
+      
+      ReactDOM.createRoot(container).render(div);
       
       
 
