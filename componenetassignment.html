@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lecture2 assignment</title>
+</head>
+
+<body>
+    <div class="js-container"></div>
+    <div class="button"></div>
+
+    <script src="https://unpkg.com/supersimpledev@8.6.4/external-library.js"></script>
+
+
+    <script>console.log("React is working");</script>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+        function Product({name,price}){
+            return(
+                <div>
+                 {name}<br/>
+                 price is :${price}<br />
+                 <button>Add to cart</button>
+                </div>
+
+            );
+        }
+
+
+        function App(){
+            return(
+                <>
+                 <Product name="Cotton socks" price="10.90"/>
+                 <Product name="Cotton socks" price="10.90"/>
+                 <Product name="Cotton socks" price="10.90"/>
+                </>
+            );
+        }
+        
+
+
+        const container=document.querySelector('.js-container');
+        ReactDOM.createRoot(container).render(<App/>);  
+    </script>
+</body>
+
+</html>
